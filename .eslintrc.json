@@ -1,0 +1,61 @@
+// 20200505100426
+// https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e1e02e45-7832-4b87-8bd1-920ed6e5188f/.eslintrc.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200505%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200505T130424Z&X-Amz-Expires=86400&X-Amz-Signature=7ad599740a5a8c8c476d42d61b38d57a8826de2636b474d36753877bc7473e92&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22.eslintrc.json%22
+
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": ".tsx"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+
+      }
+    }
+  }
+}
