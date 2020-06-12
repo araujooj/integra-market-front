@@ -8,11 +8,23 @@ interface SignInCredentials {
 
 interface AuthState {
   token: string;
-  market: object;
+  market: {
+    id: string;
+    avatar: string;
+    city: string;
+    email: string;
+    name: string;
+  };
 }
 
 interface AuthContextData {
-  market: object;
+  market: {
+    id: string;
+    avatar: string;
+    city: string;
+    email: string;
+    name: string;
+  };
   signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
 }
