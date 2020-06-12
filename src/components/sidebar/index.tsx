@@ -46,7 +46,7 @@ const Sidebar: React.FC = () => {
           </button>
         </Link>
 
-        <Link to="/stock">
+        <Link to="/stock/public">
           <button>
             <FiBox size={17} /> Estoque
           </button>

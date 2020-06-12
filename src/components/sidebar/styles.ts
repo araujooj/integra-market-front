@@ -63,10 +63,6 @@ export const ImageButton = styled.button`
   border-radius: 50%;
   margin-left: 25px;
   margin-top: 20px;
-
-  &:hover {
-    background: ${shade(0.2, "#000")};
-  }
 `;
 
 export const Content = styled.div``;
