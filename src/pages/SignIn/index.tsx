@@ -65,7 +65,6 @@ const SignIn: React.FC = () => {
     <Container>
       <Content>
         <AnimationContainer>
-          <img src={Logo} alt="Gobarber" />
           <Form ref={formRef} onSubmit={handleSubmit}>
             <h1> Faça seu logon</h1>
             <Input name="email" icon={FiMail} placeholder="E-mail"></Input>
@@ -78,10 +77,6 @@ const SignIn: React.FC = () => {
             <Button type="submit"> Entrar </Button>
             <Link to="/forgot">Esqueci minha senha</Link>
           </Form>
-          <Link to="/signup">
-            <FiLogIn />
-            Criar Conta
-          </Link>
         </AnimationContainer>
       </Content>
 

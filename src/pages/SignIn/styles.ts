@@ -50,13 +50,13 @@ export const AnimationContainer = styled.div`
     }
 
     a {
-      color: #f4ede8;
+      color: #312e38;
       display: block;
       margin-top: 24px;
       transition: 0.5s;
 
       &:hover {
-        color: ${shade(0.2, "#f4ede8")};
+        color: ${shade(0.2, "#666")};
       }
     }
   }

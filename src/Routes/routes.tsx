@@ -16,13 +16,13 @@ const Route: React.FC<RouteProps> = ({
   component: Component,
   ...rest
 }) => {
-  const { user } = useAuth();
+  const { market } = useAuth();
 
   return (
     <ReactRoute
       {...rest}
       render={({ location }) => {
-        return isPrivate === !!user ? (
+        return isPrivate === !!market ? (
           <Component />
         ) : (
           <Redirect

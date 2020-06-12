@@ -8,11 +8,11 @@ interface SignInCredentials {
 
 interface AuthState {
   token: string;
-  user: object;
+  market: object;
 }
 
 interface AuthContextData {
-  user: object;
+  market: object;
   signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
 }
@@ -30,10 +30,10 @@ const useAuth = () => {
 
 const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<AuthState>(() => {
-    const token = localStorage.getItem("@Gobarber:token");
-    const user = localStorage.getItem("@Gobarber:user");
-    if (token && user) {
-      return { token, user: JSON.parse(user) };
+    const token = localStorage.getItem("@IntegraMarket:token");
+    const market = localStorage.getItem("@IntegraMarket:market");
+    if (token && market) {
+      return { token, market: JSON.parse(market) };
     }
 
     return {} as AuthState;
@@ -44,22 +44,22 @@ const AuthProvider: React.FC = ({ children }) => {
       email,
       password,
     });
-    const { token, user } = response.data;
-    localStorage.setItem("@Gobarber:token", token);
-    localStorage.setItem("@Gobarber:user", JSON.stringify(user));
+    const { token, market } = response.data;
+    localStorage.setItem("@IntegraMarket:token", token);
+    localStorage.setItem("@IntegraMarket:market", JSON.stringify(market));
 
-    setData({ token, user });
+    setData({ token, market });
   }, []);
 
   const signOut = useCallback(() => {
-    localStorage.removeItem("@Gobarber:token");
-    localStorage.removeItem("@Gobarber:user");
+    localStorage.removeItem("@IntegraMarket:token");
+    localStorage.removeItem("@IntegraMarket:market");
 
     setData({} as AuthState);
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>
+    <AuthContext.Provider value={{ market: data.market, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );
