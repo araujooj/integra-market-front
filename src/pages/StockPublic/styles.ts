@@ -4,6 +4,13 @@ export const Container = styled.div`
   margin-left: 250px;
 `;
 
+export const Header = styled.header`
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+`;
+
 export const Title = styled.h3`
   font-size: 24px;
   color: #606060;
@@ -14,11 +21,14 @@ export const Title = styled.h3`
 
 export const TableContainer = styled.section`
   margin-top: 64px;
+  max-height: 88vh;
+  position: relative;
+  overflow: scroll;
 
   table {
     width: 100%;
     border-spacing: 0 8px;
-
+    overflow: scroll;
     th {
       color: #969cb3;
       font-weight: normal;
