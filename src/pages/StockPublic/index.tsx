@@ -3,7 +3,6 @@ import moment from "moment";
 import api from "../../services/api";
 import Sidebar from "../../components/sidebar";
 
-import Header from "../../components/header";
 import { Container, Title, TableContainer } from "./styles";
 import formatValue from "../../utils/formatValue";
 import { useAuth } from "../../hooks/AuthContext";
@@ -40,7 +39,6 @@ const StockPublic: React.FC = () => {
     <>
       <Sidebar />
       <Container>
-        <Header> Estoque público DJNKASNJKDAS ASDJKNAKJDJKAS</Header>
         <TableContainer>
           <table>
             <thead>

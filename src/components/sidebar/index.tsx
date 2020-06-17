@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiShoppingCart, FiBox } from "react-icons/fi";
+import { FaSpinner } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import api, { DEVELOPMENT_URL } from "../../services/api";
 
@@ -46,7 +47,7 @@ const Sidebar: React.FC = () => {
           </button>
         </Link>
 
-        <Link to="/stock/public">
+        <Link to="/stock">
           <button>
             <FiBox size={17} /> Estoque
           </button>
