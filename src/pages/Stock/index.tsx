@@ -56,7 +56,7 @@ const Stock: React.FC = () => {
 
           <AdmRow>
             <AdmButton>
-              <Link to="/stock/public">
+              <Link to="/stock/categories">
                 <img alt={"jkNDKASJND"} src={PublicIcon} />
                 <div>
                   <strong> Estoque Público </strong>

@@ -6,6 +6,7 @@ import SignUp from "../pages/SignUp";
 import Route from "./routes";
 import StockPublic from "../pages/StockPublic";
 import Stock from "../pages/Stock";
+import Category from "../pages/Category";
 
 const Routes: React.FC = () => (
   <Switch>
@@ -14,6 +15,8 @@ const Routes: React.FC = () => (
     <Route path="/dashboard" component={Dashboard} isPrivate />
     <Route path="/stock" exact component={Stock} isPrivate />
     <Route path="/stock/public" component={StockPublic} isPrivate />
+    <Route path="/stock/public/:category" component={StockPublic} isPrivate />
+    <Route path="/stock/categories" exact component={Category} isPrivate />
   </Switch>
 );
 

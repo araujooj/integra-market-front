@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useCallback } from "react";
 import moment from "moment";
-import api from "../../services/api";
+import React, { useCallback, useEffect, useState } from "react";
+import { useRouteMatch } from 'react-router-dom';
 import Sidebar from "../../components/sidebar";
-
-import { Container, Title, TableContainer } from "./styles";
-import formatValue from "../../utils/formatValue";
 import { useAuth } from "../../hooks/AuthContext";
+import api from "../../services/api";
+import formatValue from "../../utils/formatValue";
+import { Container, TableContainer } from "./styles";
+
 
 interface Product {
   id: string;
@@ -18,8 +19,14 @@ interface Product {
   };
 }
 
+interface CategoryParams { 
+  category :string;
+}
+
 const StockPublic: React.FC = () => {
   const { market } = useAuth();
+  const { params } = useRouteMatch<CategoryParams>();
+  console.log(params)
   const [products, setProducts] = useState<Product[]>([]);
 
   const loadProducts = useCallback(async () => {

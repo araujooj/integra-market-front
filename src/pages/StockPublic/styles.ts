@@ -13,9 +13,9 @@ export const Title = styled.h3`
 `;
 
 export const TableContainer = styled.section`
+  height: 95vh;
   max-height: 95vh;
   position: relative;
-  overflow: scroll;
 
   table {
     width: 100%;
