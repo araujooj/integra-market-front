@@ -6,7 +6,6 @@ import { useAuth } from "../../hooks/AuthContext";
 import api from "../../services/api";
 import { CategoryBtn, CategoryContainer, Container, Title } from "./styles";
 
-
 interface Category {
   id: string;
   title: string;

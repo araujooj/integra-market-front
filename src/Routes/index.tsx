@@ -7,11 +7,13 @@ import Route from "./routes";
 import StockPublic from "../pages/StockPublic";
 import Stock from "../pages/Stock";
 import Category from "../pages/Category";
+import Order from "../pages/Order";
 
 const Routes: React.FC = () => (
   <Switch>
     <Route exact path="/" component={SignIn} />
     <Route path="/signup" component={SignUp} />
+    <Route path="/orders/:id" component={Order} isPrivate />
     <Route path="/dashboard" component={Dashboard} isPrivate />
     <Route path="/stock" exact component={Stock} isPrivate />
     <Route path="/stock/public" component={StockPublic} isPrivate />

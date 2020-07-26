@@ -29,7 +29,7 @@ const Stock: React.FC = () => {
             <div>
               <img alt={"jkNDKASJND"} src={DatabaseIcon} />
               <div>
-                <strong> 15,533 itens públicos </strong>
+                <strong> 8 itens públicos </strong>
               </div>
             </div>
           </InfoCard>
@@ -37,7 +37,7 @@ const Stock: React.FC = () => {
             <div>
               <img alt={"jkNDKASJND"} src={Lock} />
               <div>
-                <strong> 5,533 itens privados </strong>
+                <strong> 0 itens privados </strong>
               </div>
             </div>
           </InfoCard>
@@ -45,7 +45,7 @@ const Stock: React.FC = () => {
             <div>
               <img alt={"jkNDKASJND"} src={Category} />
               <div>
-                <strong> 27 seções </strong>
+                <strong> 4 seções </strong>
               </div>
             </div>
           </InfoCard>

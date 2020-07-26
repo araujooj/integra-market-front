@@ -38,7 +38,7 @@ const Sidebar: React.FC = () => {
         <Image src={avatar} alt="Supermarket" />
       </ImageButton>
       <MoneyText>
-        Caixa: <b>R$ 3578,77</b>
+        Caixa: <b>R$ 0,00</b>
       </MoneyText>
       <SidebarButtons>
         <Link to="/dashboard">
